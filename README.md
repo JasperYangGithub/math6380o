@@ -12,12 +12,14 @@ The following table displays the number of images in the training and validation
 |total   |40000 | 3033 |     |
 
 Prepare dataset
-===============
+=======
+
 To prepare dataset, download the original data from https://www.kaggle.com/c/semi-conductor-image-classification-first/data
 Download `data/val_bads.csv`, `data/val_goods.csv`, `data/split_val.py`
 into the same directory. In this directory, run
 `python split_val.py path/to/dataset/dir`
 in the command line window, to separate a validation set named path/to/dataset/dir/val from images in path/to/dataset/dir/train.
+
 Simple augmented dataset
 -------------
 To augment the data, run

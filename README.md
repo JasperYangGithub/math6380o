@@ -25,6 +25,7 @@ Simple augmented dataset
 To augment the data, run
 `python path/to/dir/image_transformation.py path/to/dataset/dir/train/bad_1 13033`
 to generate 13033 additional bad images in the training set. 
+
 Filtered dataset
 -------------
 Later we tried the dataset after filtering, though we didn't find that it improve the result.

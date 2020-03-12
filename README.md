@@ -48,8 +48,12 @@ Note `dataset_dir= 'path/to/dataset/dir'` is by default `'kaggle_data'`. Please 
 
 The code for test models, feature extraction, and heatmap plotting using class activation mapping is in `Test_featureExtract_heatmap.ipynb`.
 	
-
-
-
+Results
+Consider bad samples as positive cases.
+|tpr|fpr   |
+|---|------|
+|1  |0.7964|
+|0.99|0.3014|
+|0.98|0.2477|
 
 

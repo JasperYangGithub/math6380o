@@ -37,18 +37,19 @@ chmod 755 filtered_dataset.sh
 ```
 to create a new dataset under directory path/to/new/dataset/dir
 
+
 Training
 ========
 Training is done by transfer learning. 
 * Find training using Resnet18, 50, EfficientNet on simple augmented dataset and Resnet 50 on filtered dataset in `Transferlearning_Resnet_EfficientNet.ipynb`
 Note `dataset_dir= 'path/to/dataset/dir'` is by default `'kaggle_data'`. Please change it to your dataset directory.
-* Find training using VGG in `VGG16_.ipynb`
 * Find training using Wide Resnet50-2, Resnet50-32X4d in `Resnet.ipynb` 
 
 
 The code for test models, feature extraction, and heatmap plotting using class activation mapping is in `Test_featureExtract_heatmap.ipynb`.
 	
 Results
+-------
 Consider bad samples as positive cases.
 |tpr|fpr   |
 |---|------|

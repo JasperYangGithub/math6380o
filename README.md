@@ -84,12 +84,15 @@ Test set AUC 0.989
 Class weight: 100 to 1
 
 Validation set AUC 0.989
+
 |tpr|fpr|thr|
 |---|---|---|
 |1|0.408|0.0185|
 |0.99|0.300|0.0274|
 |0.98|0.123|0.0685|
+
 Test set AUC 0.982
+
 |tpr|fpr|thr|
 |---|---|---|
 |1|0.629|0.00913|

@@ -98,6 +98,7 @@ Test set AUC 0.982
 |1|0.629|0.00913|
 |0.99|0.410|0.0195|
 |0.98|0.265|0.0327|
+
 Filtered dataset(AUC 0.9891)
 Validation set
 |tpr|fpr|

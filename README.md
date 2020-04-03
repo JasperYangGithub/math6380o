@@ -48,13 +48,64 @@ Note `dataset_dir= 'path/to/dataset/dir'` is by default `'kaggle_data'`. Please 
 
 The code for test models, feature extraction, and heatmap plotting using class activation mapping is in `Test_featureExtract_heatmap.ipynb`.
 	
+
+Anomaly Detection and Visualization
+========
+First download and unzip `'train_pretrained_resnet50_features.zip'` in `'data'` file. Put the `'train_pretrained_resnet50_features.csv'` in the working directory and run `'Anomaly Detection.ipynb'`.
+The output `'outlier_ind.csv'` and `'outlier_if_ind.csv'` are outlier indices for OCSVM and Isolation Forest respectively.
+
+Next run `'outlier_if_ind.csv'`. Note that the data_directory need to be changed to the directory of original semi-conductor datasets accordingly.
+
 Results
 -------
 Consider bad samples as positive cases.
-|tpr|fpr   |
-|---|------|
-|1  |0.7964|
-|0.99|0.3014|
-|0.98|0.2468|
 
+Validation set AUC 0.9888
+|tpr|fpr   |thr|
+|---|------|---|
+|1  |0.7964|0.00026|
+|0.99|0.3014|0.00214|
+|0.98|0.2468|0.00283|
 
+Training set AUC 0.996
+|tpr|fpr   |thr|
+|---|------|---|
+|1 |0.664|0.000493|
+|0.99|0.083|0.00902|
+|0.98|0.026|0.0398|
+
+Test set AUC 0.989
+|tpr|fpr|thr|
+|---|---|---|
+|1  |0.747|0.000336|
+|0.99|0.179|0.00393|
+|0.98|0.054|0.0141|
+
+Class weight: 100 to 1
+
+Validation set AUC 0.989
+|tpr|fpr|thr|
+|---|---|---|
+|1|0.408|0.0185|
+|0.99|0.300|0.0274|
+|0.98|0.123|0.0685|
+Test set AUC 0.982
+|tpr|fpr|thr|
+|---|---|---|
+|1|0.629|0.00913|
+|0.99|0.410|0.0195|
+|0.98|0.265|0.0327|
+Filtered dataset(AUC 0.9891)
+Validation set
+|tpr|fpr|
+|---|---|
+|1 | 0.8842|
+|0.99|0.2394|
+|0.98|0.1420|
+
+Augmented 10k more bad images still 14 epoch training 
+|tpr|fpr|
+|---|---|
+|1  |0.957|
+|0.99|0.4286|
+|0.98|0.0834|
